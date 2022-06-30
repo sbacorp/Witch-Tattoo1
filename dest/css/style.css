@@ -1497,16 +1497,16 @@ h6 {
   min-height: 424px;
 }
 
-.item-salon__image {
+.item-salon__image img {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 34px;
 }
 
-.item-salon__image:hover {
+.item-salon__image img:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1578,6 +1578,8 @@ h6 {
 }
 
 .image-heat {
+  -webkit-animation: "heat" 4s ease-in-out 0s infinite alternate none;
+  animation: "heat" 4s ease-in-out 0s infinite alternate none;
   text-align: center;
   margin-top: 232px;
   margin-bottom: 150px;
@@ -1778,6 +1780,8 @@ label {
   text-align: center;
   margin-top: 255px;
   margin-bottom: 139px;
+  -webkit-animation: "heat" 4s ease-in-out 0s infinite alternate none;
+  animation: "heat" 4s ease-in-out 0s infinite alternate none;
 }
 
 .image-heat1 img {
@@ -1812,6 +1816,30 @@ appointment-card.scss .wrapper {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+@-webkit-keyframes heat {
+  0% {
+    -webkit-transform: translate(40px, 40px);
+    transform: translate(40px, 40px);
+  }
+
+  100% {
+    -webkit-transform: translate(-40px, -40px);
+    transform: translate(-40px, -40px);
+  }
+}
+
+@keyframes heat {
+  0% {
+    -webkit-transform: translate(40px, 40px);
+    transform: translate(40px, 40px);
+  }
+
+  100% {
+    -webkit-transform: translate(-40px, -40px);
+    transform: translate(-40px, -40px);
+  }
 }
 
 @supports (-webkit-appearance:none) {
@@ -6858,6 +6886,10 @@ appointment-card.scss .wrapper {
 
   .item-salon {
     padding: 0;
+  }
+
+  .item-salon__image img {
+    width: 80%;
   }
 
   .salon__appointment {
